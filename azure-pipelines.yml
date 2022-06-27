@@ -41,5 +41,4 @@ stages:
         resourceGroupName: 'jesume-testing-webapps'
         slotName: 'test'
         package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
-        customWebConfig: '-Handler iisnode -NodeStartFile server.js -appType node'
         deploymentMethod: 'zipDeploy'
