@@ -21,7 +21,6 @@ stages:
     - script: |
         npm install
         npm run build --if-present
-        find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +
       displayName: 'npm install, build and test'
     - task: ArchiveFiles@2
       inputs:
