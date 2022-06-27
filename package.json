@@ -2,8 +2,14 @@
   "name": "expressapidemo",
   "version": "0.0.0",
   "private": true,
+  "main": "server.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "set NODE_ENV=development && nodemon --ignore ./client/ server.js",
+    "startold": "concurrently \"npm run mockapi\" \"nodemon -w server.js server.js\"",
+    "mockapi": "json-server -p 3333 -w db.json db.json",
+    "migrate": "node migrate.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
