@@ -37,8 +37,6 @@ stages:
         azureSubscription: 'MAIC - TEK Experts CR - v-gengon Group#2 (bddf3c59-769c-49a7-a515-6310ce264e6a)'
         appType: 'webApp'
         appName: 'jesumeNodeDevOpsExpress'
-        deployToSlotOrASE: true
         resourceGroupName: 'jesume-testing-webapps'
-        slotName: 'test'
         package: '$(Build.ArtifactStagingDirectory)/**/*.zip'
         deploymentMethod: 'zipDeploy'
